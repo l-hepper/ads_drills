@@ -13,16 +13,16 @@ class Node {
 };
 
 // Define a LinkedList class
-class LinkedList {
-public:
-    Node* head;
+// Write code here to define the linked list member variables and constructor(s)
+//
 
-    LinkedList() : head(NULL) {}
-
-    // Implement the function to insert an element at the front of the linked list - bonus: what is the time complexity of this operation?
-    // Write your code here
-    
-    
+    // Function to insert an element into first position
+    void insertFirst(int val) {
+        Node* newNode = new Node(val);
+        newNode->next = head;
+        head = newNode;
+        this->length++;
+    }
 
     // Function to delete the first element
     void deleteFirst() {
@@ -34,6 +34,7 @@ public:
         Node* temp = head; // store the current node - pointed to by 'head' - to temp so that it can be deleted after head is set to the current 2nd node.
         head = head->next;
         delete temp;
+        this->length--;
     }
 
     // Function to print the elements of the list
@@ -49,6 +50,11 @@ public:
 
 int main() {
     LinkedList myList;
+
+    LinkedList* myLinkedList = new LinkedList(5);
+    LinkedList* myLinkyList = new LinkedList();
+    cout << myLinkedList->length << endl;
+    cout << myLinkyList->length << endl;
 
     // Insert some elements
     myList.insertFirst(3);

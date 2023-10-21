@@ -40,8 +40,7 @@ public:
 
     // Implement the function to print all of the elements of the list
     // Write code here
-    //
-    //
+    
 };
 
 int main() {
