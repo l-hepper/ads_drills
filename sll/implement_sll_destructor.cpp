@@ -24,15 +24,7 @@ public:
         this->insertFirst(val);
     }
 
-    // Destructor implementation necessary for a linked list
-    ~LinkedList() {
-        Node* temp = head;
-        while (head != NULL) {
-            head = head->next;
-            delete temp;
-            temp = head;
-        }
-    }
+    // Implement the destructor for the LinkedList below
 
     // Function to insert an element into first position
     void insertFirst(int val) {
