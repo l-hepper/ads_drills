@@ -49,24 +49,7 @@ public:
         this->length--;
     }
 
-    // function to append a node to the linked list
-    void append(int value) {
-        Node* newNode = new Node(value);
-
-        if (head == NULL) {
-            head = newNode;
-        } else {
-
-            Node* current = head;
-            while (current->next != NULL) {
-                current = current->next;
-            }
-
-            current->next = newNode;
-
-        }
-        this->length++;
-    }
+    // Implement the 'append' function to add an item to the end of the linked list
 
     // Function to print the elements of the list
     void printList() {
@@ -111,7 +94,7 @@ int main() {
 
     LinkedList* newList = new LinkedList();
     newList->append(99);
-    newList->printList();
+    newList->printList();1
 
 
     return 0;
