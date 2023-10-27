@@ -27,9 +27,7 @@ public:
     }
 
     // TODO - implement the 'deleteFirst' algorithm which should delete the first element in the linked list - bonus: what is the time complexity of this algorithm?
-    // write code below
-    //
-    //
+    
 
     // Function to print the elements of the list
     void printList() {

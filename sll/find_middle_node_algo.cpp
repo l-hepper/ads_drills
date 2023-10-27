@@ -225,87 +225,9 @@ public:
     }
 
     // Find the middle node of a linked list (using the tortoise and hare algorithm)
-    Node* findMiddleNode() {
-
-        Node* slow = head;
-        Node* fast = head;
-        while (fast != nullptr && fast->next !=nullptr) {
-            slow = slow->next;
-            fast = fast->next->next;
-        }
-        
-        
-        return slow;
-    }
-
-    // Determine if the linked list has a 'loop' i.e. the last node links back to the first node - uses the 'tortoise and hare' algorithm to find out
-    bool hasLoop() {
-        Node* fast = head;
-        Node* slow = head;
-        
-        while (fast != nullptr && fast->next != nullptr) {
-            slow = slow->next;
-            fast = fast->next->next;
-            
-            if (slow == fast) {
-                return true;
-            }
-        }
-        
-        return false;
-    }
-
-    // find the node 'kth' from the end of the list - uses tortoise and hare - send fast ahead by kth - then iterate both by one until fast reaches null - return slow for kth node from the end
-    Node* findKthFromEnd(int k) {
-            Node* slow = head;
-            Node* fast = head;
-            
-            for (int i {0}; i < k; i++) {
-                if (fast == nullptr) {
-                    return nullptr;
-                }
-                fast = fast->next;
-            }
-            
-            while (fast != nullptr) {
-                fast = fast->next;
-                slow = slow->next;
-            }
-            
-            return slow;
-            
-    }
-
-    // Partition list exercise - Given a value of x, the list should be partitioned so that values less than x are placed before x, and values greater than or equal to x are placed after
-    void partitionList(int value) {
-        if (head == nullptr) {
-            return;
-        }
-        
-        Node dummy1(0);
-        Node dummy2(0);
-        
-        Node* prev1 = &dummy1;
-        Node* prev2 = &dummy2;
-        
-        Node* current = head;
-        while (current != nullptr) {
-            if (current->value < value) {
-                prev1->next = current;
-                prev1 = current;
-            } else {
-                prev2->next = current;
-                prev2 = current;
-            }
-            current = current->next;
-        }
-        
-        prev2->next = nullptr;
-        prev1->next = dummy2.next;
-        head = dummy1.next;
-    }
-
-
+    //
+    //
+    
 };
 
 int main() {

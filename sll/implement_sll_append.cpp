@@ -49,7 +49,41 @@ public:
         this->length--;
     }
 
+    // Implement the function to 'deleteLast' element in the linked list below
+    void deleteLast() {
+        if (head == NULL) {
+            cout << "The linked list is empty" << endl;
+        } else if (head->next == NULL) {
+            cout << "There is only one item in the linked list which will now be deleted";
+            head = NULL;
+        } else {
+            Node* current = head;
+            Node* pre;
+            while (current->next != NULL) {
+                pre = current;
+                current = current->next;
+            }
+            delete current;
+            pre->next = nullptr;
+            length--;
+        }
+    }
+
     // Implement the 'append' function to add an item to the end of the linked list
+    void append(int value) {
+
+        // First create the new node to be appended to the linked list
+        Node* newNode = new Node(value);
+
+        // Now iterate over the linked list until you reach the last node
+        Node* current = head;
+        while (current != nullptr) {
+            current = current->next;
+        }
+
+        // Assign the last node's next to the new node
+        current->next = newNode;
+    }
 
     // Function to print the elements of the list
     void printList() {
@@ -88,13 +122,8 @@ int main() {
     cout << "List after deletion: ";
     myList.printList();
 
-    myList.append(12);
+    myList.deleteLast();
     myList.printList();
-
-
-    LinkedList* newList = new LinkedList();
-    newList->append(99);
-    newList->printList();1
 
 
     return 0;

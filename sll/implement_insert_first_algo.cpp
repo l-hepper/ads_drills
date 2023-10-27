@@ -20,7 +20,7 @@ public:
     LinkedList() : head(NULL) {}
 
     // Implement the function to insert an element at the front of the linked list - bonus: what is the time complexity of this operation?
-    // Write your code here
+    // Write code here
     
     
 

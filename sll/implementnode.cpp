@@ -2,7 +2,7 @@
 using namespace std;
 
 // TODO - Construct a Node class which the SLL class can use for its operations
-// class Node goes here
+// Implement code here
 
 // Define a LinkedList class
 class LinkedList {
